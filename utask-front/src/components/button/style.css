@@ -1,8 +1,11 @@
-.botaoStyle{
-    width: 374px;
-    height: 45px;
+.botaoStyle {
+    width: 23.375rem;     
+    height: 2.8125rem;     
     background-color: #226ED8;
-    border-radius: 20px;
+    border-radius: 1.25rem; 
     border: 1px solid #226ED8;
     color: white;
+    
+    cursor: pointer;
+    font-weight: 600; 
 }

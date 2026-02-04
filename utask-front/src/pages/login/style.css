@@ -1,12 +1,6 @@
-#loginImage{
-    width: 476px;
-    height: 465px;;
+#loginImage {
+    width: 29.75rem;    
+    height: 29.0625rem;   
+    margin-top: 6.25rem; 
+    margin-left: 5rem;  
 }
-
-
-
-.loginImage{
-    margin-top: 100px;
-    margin-left: 80px;
-}
-
