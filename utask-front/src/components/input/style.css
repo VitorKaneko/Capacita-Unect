@@ -4,4 +4,27 @@
     border-radius: 0.5rem; 
 
     border: 1px solid #002D6C; 
+
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.input-wrapper{
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+.buttonEye{
+    position: absolute;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #002D6C;
+    display: flex;
+    align-items: center;
 }
