@@ -1,15 +1,16 @@
 import './style.css'; 
-import { useState } from 'react';
+import { useState, type InputHTMLAttributes } from 'react';
 import openEye from '../../assets/openEye.svg';
 import closedEye from '../../assets/closedEye.svg';
 
-interface InputProps {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   type: string;        
   placeholder: string; 
   className: string;
+  error?: string | null;
 }
 
-export function Input({ type, placeholder, className }: InputProps) {
+export function Input({ type, placeholder, className, error }: InputProps) {
   const [showPassword, setShowPassword] = useState(false);
 
   const isPassword = type === 'password';
@@ -19,17 +20,19 @@ export function Input({ type, placeholder, className }: InputProps) {
     <div className="input-container">
       <div className='input-wrapper'> 
         <input 
+          className= {`input-padrao ${error? 'input-erro' : ''} ${className || ''}`}
           type={currentType} 
           placeholder={placeholder} 
-          className= {`input-padrao ${className || ''}`}
         />
-
         {isPassword && (
           <button type='button' className='buttonEye' onClick={() => setShowPassword(!showPassword)}>
             <img src={showPassword ? closedEye : openEye} alt='Visibilidade da Senha'className='buttonEye'/>
           </button>
         )}
       </div>
+      {error && (
+        <span className='erroMessage'>{error}</span>
+      )}
     </div>
   );
 }

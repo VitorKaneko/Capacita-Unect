@@ -4,8 +4,25 @@ import { Input } from '../../components/input';
 import { LinhaHorizontal } from '../../components/linhahorizontal';
 import loginImage from '../../assets/loginImage.svg';
 import './style.css';
+import { Link } from 'react-router';
+import { useState, type FormEvent } from 'react';
 
 export function Login() {
+
+  const [senha, setSenha] = useState('');
+  const [errorSenha, setErroSenha] = useState<string | null>(null);
+
+  function verificaSenha(event: FormEvent) {
+    event.preventDefault();
+    setErroSenha(null);
+    
+    if(senha != '123456'){
+      setErroSenha('Senha incorreta, tente novamente.');
+      return;
+    }
+
+  }
+
   return (
     <>
       <Header />  
@@ -17,7 +34,7 @@ export function Login() {
 
           <h1 id="tituloLogin">uTask 3.0</h1>
 
-          <form>
+          <form onSubmit={verificaSenha}>
             <p>E-mail</p>
             <Input
               type="email"
@@ -30,6 +47,9 @@ export function Login() {
               type="password"
               placeholder="Digite sua senha"
               className="input-senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              error = {errorSenha}
             />
             <p id='recuperacaoLogin'>Esqueceu a senha?</p>
 
@@ -40,8 +60,15 @@ export function Login() {
             />
           </form>
           <LinhaHorizontal/>
+          
 
-          <p id="criarConta">Não tem cadastro? Crie uma conta</p>
+          <div>
+            <span>Não tem cadastro?</span>
+            <Link to="/cadastro" id="criarConta">
+              Crie uma conta
+            </Link>
+          </div>
+
         </div>
         
 

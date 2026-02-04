@@ -1,0 +1,37 @@
+#tituloCadastro{
+    font-size: 3rem;
+    color: #226ED8;
+}
+
+
+.cadastroTela{
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastroImage{
+    margin: 2rem;
+    margin-left: 4rem;
+    width: 27.5rem;
+    height: 27rem;
+    border-left: 1px solid #9CC7FBB2;
+}
+
+.cadastroForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-criar-cadastro{
+    margin-top: 1rem;
+}
+
+.erroMessage{
+    color:#820000;
+    font-size: 0.75rem;
+}
