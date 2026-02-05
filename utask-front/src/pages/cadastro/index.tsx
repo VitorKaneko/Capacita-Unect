@@ -4,8 +4,22 @@ import { Input } from '../../components/input';
 import { LinhaHorizontal } from '../../components/linhahorizontal';
 import cadastroImage from '../../assets/cadastroImage.svg';
 import './style.css';
+import { useState, type FormEvent } from 'react';
+
 
 export function Cadastro() {
+  const [senha, setSenha] = useState('');
+  const [confirmarSenha, setConfirmarSenha] = useState('');
+  const [erroSenha, setErroSenha] = useState<string | null>(null);
+
+  function comparaSenha(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setErroSenha(null);
+    if (senha !== confirmarSenha){
+      setErroSenha('Senhas não combinam, tente novamente.');
+      return;
+    }
+  }
   return (
     <>
       <Header />  
@@ -15,10 +29,10 @@ export function Cadastro() {
           <h1 id="tituloCadastro">uTask 3.0</h1>
           <LinhaHorizontal/>
 
-          <form>
+          <form onSubmit={comparaSenha}>
             <p>Nome de usuário</p>
             <Input
-              type="string"
+              type="text"
               placeholder="Digite seu nome de usuário"
               className='input-usuario'
             />
@@ -35,6 +49,9 @@ export function Cadastro() {
               type="password"
               placeholder="Digite sua senha"
               className="input-senha"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              error={erroSenha}
             />
 
             <p>Confirmar senha</p>
@@ -42,6 +59,9 @@ export function Cadastro() {
               type="password"
               placeholder="Digite sua senha novamente"
               className="input-confirmar-senha"
+              value={confirmarSenha}
+              onChange={(e) => setConfirmarSenha(e.target.value)}
+              error={erroSenha}
             />
 
             <Botao

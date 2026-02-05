@@ -10,7 +10,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   error?: string | null;
 }
 
-export function Input({ type, placeholder, className, error }: InputProps) {
+export function Input({ type, placeholder, className, error, ...props }: InputProps) {
   const [showPassword, setShowPassword] = useState(false);
 
   const isPassword = type === 'password';
@@ -23,10 +23,11 @@ export function Input({ type, placeholder, className, error }: InputProps) {
           className= {`input-padrao ${error? 'input-erro' : ''} ${className || ''}`}
           type={currentType} 
           placeholder={placeholder} 
+          {...props}
         />
         {isPassword && (
           <button type='button' className='buttonEye' onClick={() => setShowPassword(!showPassword)}>
-            <img src={showPassword ? closedEye : openEye} alt='Visibilidade da Senha'className='buttonEye'/>
+            <img src={showPassword ? openEye : closedEye} alt='Visibilidade da Senha'className='buttonEye'/>
           </button>
         )}
       </div>
