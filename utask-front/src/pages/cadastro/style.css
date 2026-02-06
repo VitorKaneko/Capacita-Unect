@@ -35,3 +35,29 @@
     color:#820000;
     font-size: 0.75rem;
 }
+
+
+
+
+@media (max-width: 768px) {
+    .loginScreen, .cadastroTela {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem; 
+        justify-content: center;
+    }
+    .cadastroImage {
+        display: none;
+    }
+
+    .loginForm, .cadastroForm {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+    #tituloLogin, #tituloCadastro {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+}

@@ -53,3 +53,27 @@
 .botao-entrar{
     margin-top: 1rem;
 }
+
+
+
+@media (max-width: 768px) {
+    .loginScreen, .cadastroTela {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        justify-content: center;
+    }
+    .loginImage, .cadastroImage {
+        display: none;
+    }
+    .loginForm, .cadastroForm {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        align-items: center; 
+    }
+    #tituloLogin, #tituloCadastro {
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+}
