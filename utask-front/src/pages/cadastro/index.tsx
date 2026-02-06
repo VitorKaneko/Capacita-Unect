@@ -2,23 +2,33 @@ import { Header } from '../../components/header';
 import { Botao } from '../../components/button';
 import { Input } from '../../components/input';
 import { LinhaHorizontal } from '../../components/linhahorizontal';
+import { Modal } from '../modal';
 import cadastroImage from '../../assets/cadastroImage.svg';
 import './style.css';
 import { useState, type FormEvent } from 'react';
-
+import { useNavigate } from 'react-router';
 
 export function Cadastro() {
   const [senha, setSenha] = useState('');
   const [confirmarSenha, setConfirmarSenha] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [erroSenha, setErroSenha] = useState<string | null>(null);
-
+  const navigate = useNavigate()
+  
   function comparaSenha(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setErroSenha(null);
     if (senha !== confirmarSenha){
       setErroSenha('Senhas não combinam, tente novamente.');
       return;
+    }else{
+      setIsModalOpen(true);
+      setTimeout(() => {
+        setIsModalOpen(false);
+        navigate('/login');
+      }, 2000);
     }
+
   }
   return (
     <>
@@ -48,6 +58,7 @@ export function Cadastro() {
             <Input
               type="password"
               placeholder="Digite sua senha"
+              
               className="input-senha"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
@@ -70,6 +81,12 @@ export function Cadastro() {
               className='botao-criar-cadastro' 
             />
           </form>
+
+          <Modal 
+            isOpen={isModalOpen}
+            titulo="Conta criada com sucesso"
+            mensagem="Um instante, iremos te redirecionar ao login!"
+          />
         </div>
 
         <div className="cadastroImage">
