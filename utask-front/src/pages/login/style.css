@@ -25,6 +25,7 @@
 
 .loginScreen{
     width: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -55,25 +56,39 @@
 }
 
 
-
-@media (max-width: 768px) {
-    .loginScreen, .cadastroTela {
+/*Mobile*/
+@media (max-width: 375px) {
+    .loginScreen {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
         flex-direction: column;
         height: auto;
-        padding: 1rem;
         justify-content: center;
+        min-width: auto;
+        align-items: center;
+        margin-top: 1rem;
     }
-    .loginImage, .cadastroImage {
+    .loginImage {
         display: none;
     }
-    .loginForm, .cadastroForm {
+    .loginForm {
         width: 100%;
-        max-width: 100%;
-        padding: 0;
-        align-items: center; 
+        align-items: center;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
-    #tituloLogin, #tituloCadastro {
+    #tituloLogin {
         font-size: 1.8rem;
-        margin-top: 2rem;
+    }
+    form{
+        width: 80%;
+        
+    }
+    .cadastroLink{
+        font-size: 0.8rem;
     }
 }

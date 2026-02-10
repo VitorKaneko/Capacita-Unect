@@ -62,8 +62,8 @@ export function Login() {
           <LinhaHorizontal/>
           
 
-          <div>
-            <span>Não tem cadastro?</span>
+          <div className="cadastroLink">
+            <span>Não tem cadastro? </span>
             <Link to="/cadastro" id="criarConta">
               Crie uma conta
             </Link>

@@ -4,3 +4,12 @@
     margin: 2rem auto;
     background-color: #3B5F91;
 }
+
+@media (max-width: 375px) {
+    .linha-horizontal {
+        width: 40%;
+        height: 1px;
+        margin: 1rem auto;
+        background-color: #3B5F91;
+    }
+}
