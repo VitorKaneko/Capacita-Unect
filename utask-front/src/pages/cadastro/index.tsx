@@ -32,7 +32,7 @@ export function Cadastro() {
   }
   return (
     <>
-      <Header />  
+      <Header showContent={false}/>  
       <div className="cadastroTela">
         <div className="cadastroForm">
 

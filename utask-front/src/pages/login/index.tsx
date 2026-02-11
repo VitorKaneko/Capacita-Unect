@@ -4,8 +4,9 @@ import { Input } from '../../components/input';
 import { LinhaHorizontal } from '../../components/linhahorizontal';
 import loginImage from '../../assets/loginImage.svg';
 import './style.css';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { useState, type FormEvent } from 'react';
+
 
 export function Login() {
 
@@ -23,9 +24,14 @@ export function Login() {
 
   }
 
+  function login(){
+    const navigate = useNavigate();
+    navigate('/kanban');
+  }
+
   return (
     <>
-      <Header />  
+      <Header showContent={false} />  
       <div className="loginScreen">
         <div className="loginImage">
           <img id="loginImage" src={loginImage} alt="Ilustração de Login" />
@@ -56,7 +62,8 @@ export function Login() {
             <Botao
               type='submit'
               text='Entrar'
-              className='botao-entrar' 
+              className='botao-entrar'
+              
             />
           </form>
           <LinhaHorizontal/>
@@ -70,7 +77,7 @@ export function Login() {
           </div>
 
         </div>
-        
+        <Link to="/kanban" id="linkKanban">Ir para Kanban</Link>
 
       </div>
 
