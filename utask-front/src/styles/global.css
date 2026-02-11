@@ -5,12 +5,30 @@
     box-sizing: border-box;
 }
 
+
+:root{
+    --bg-primary: #3867D6;
+    --bg-card: #F5F5F5;
+    --text: #F5F5F5;
+}
+
+[data-theme='dark']{
+    --bg-primary:#333333;
+    --bg-card:#222222;
+    --text: #3867D6;
+    --text-color: white;
+}
+
 body{
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 
 @media (max-width: 375px) {
@@ -20,3 +38,4 @@ body{
        
     }
 }
+
