@@ -10,6 +10,10 @@
     --bg-primary: #3867D6;
     --bg-card: #F5F5F5;
     --text: #F5F5F5;
+    --color-daily-icon: #FBB910;
+    --bg-icon: #FFF5C0;
+    --icon-border: #FFF5C0;
+    --bg-daily: #F5F5F5;
 }
 
 [data-theme='dark']{
@@ -17,6 +21,10 @@
     --bg-card:#222222;
     --text: #3867D6;
     --text-color: white;
+    --bg-icon: #3D3D3D;
+    --icon-border: #515151;
+    --color-daily-icon: #FFFFFF;
+    --bg-daily: #3D3D3D;
 }
 
 body{
@@ -24,7 +32,7 @@ body{
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-card);
     color: var(--text-main);
     transition: background-color 0.3s ease, color 0.3s ease;
 }

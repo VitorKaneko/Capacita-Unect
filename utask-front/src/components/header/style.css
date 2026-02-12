@@ -13,7 +13,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 4rem 0rem 4rem;
+    padding: 0rem 10rem 0rem 10rem;
     font-size: 1.3rem;
     color: var(--text);
 }
@@ -59,7 +59,7 @@
 }
 
 .switchInput:checked + .switchLabel::after {
-    transform: translateX(32px);
+    transform: translateX(22.8px);
 }
 
 

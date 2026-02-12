@@ -1,6 +1,23 @@
 .dailyMessageContainer{
     background-color: var(--bg-card);
-    width: 100%;
+    width: 50%;
     height: 100%;
     color: var(--text-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4rem;
+    margin-left: 7rem;
+    padding: 0.5rem;
+}
+
+.dailyMessageContainer{
+    background-color: var(--bg-daily);
+    border-radius: 1rem;
+}
+
+.dailyText{
+    font-size: 1rem;
+    margin-left: 1rem; 
 }
