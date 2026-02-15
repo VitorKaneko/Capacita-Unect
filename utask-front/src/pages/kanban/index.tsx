@@ -1,6 +1,7 @@
 import './style.css'
 import { Header } from '../../components/header';
 import { DailyText } from '../../components/dailytext';
+import { Footer }  from '../../components/footer';
 
 export function Kanban() {
     return (
@@ -15,7 +16,14 @@ export function Kanban() {
                     <DailyText/>
                 </div>
                 
+                <div className='quadroKanban'>
+                    <div className="quadroReadyContainer"></div>
+                    <div className="quadroProgressContainer"></div>
+                    <div className="quadroDoneContainer"></div>
+                </div>
+
             </div>
+            <Footer />
         </>
     );
 }

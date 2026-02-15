@@ -59,7 +59,7 @@
 }
 
 .switchInput:checked + .switchLabel::after {
-    transform: translateX(22.8px);
+    transform: translateX(30px);
 }
 
 

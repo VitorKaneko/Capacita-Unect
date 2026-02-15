@@ -31,7 +31,7 @@ export function Login() {
 
   return (
     <>
-      <Header showContent={false} />  
+      <Header /*showContent={false}*/ />  
       <div className="loginScreen">
         <div className="loginImage">
           <img id="loginImage" src={loginImage} alt="Ilustração de Login" />
