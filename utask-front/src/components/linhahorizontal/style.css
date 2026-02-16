@@ -5,7 +5,7 @@
     background-color: #3B5F91;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .linha-horizontal {
         width: 40%;
         height: 1px;

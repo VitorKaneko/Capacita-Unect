@@ -38,9 +38,7 @@
 }
 
 
-
-
-@media (max-width: 375px) {
+@media (max-width: 376px) {
     .cadastroTela {
         flex-direction: column;
         height: auto;
@@ -60,7 +58,7 @@
         align-items: center;
     }
     #tituloCadastro {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         margin-top: 1rem;
     }
 }

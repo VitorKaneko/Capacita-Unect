@@ -23,15 +23,9 @@ export function Login() {
     }
 
   }
-
-  function login(){
-    const navigate = useNavigate();
-    navigate('/kanban');
-  }
-
   return (
     <>
-      <Header /*showContent={false}*/ />  
+      <Header showContent={false} />  
       <div className="loginScreen">
         <div className="loginImage">
           <img id="loginImage" src={loginImage} alt="Ilustração de Login" />
