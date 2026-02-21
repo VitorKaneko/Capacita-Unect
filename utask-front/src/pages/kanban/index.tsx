@@ -2,6 +2,7 @@ import './style.css'
 import { Header } from '../../components/header';
 import { DailyText } from '../../components/dailytext';
 import { Footer }  from '../../components/footer';
+import { Quadro } from '../../components/quadro';   
 
 export function Kanban() {
     return (
@@ -15,14 +16,15 @@ export function Kanban() {
                     <h1 className="dailyTitle">Frase do dia</h1>
                     <DailyText/>
                 </div>
-                
-                <div className='quadroKanban'>
-                    <div className="quadroReadyContainer"></div>
-                    <div className="quadroProgressContainer"></div>
-                    <div className="quadroDoneContainer"></div>
-                </div>
-
             </div>
+            
+
+            <div className="quadrosContainer"> 
+                <Quadro className='quadroKanban' titulo='A fazer'/>
+                <Quadro className='quadroKanban' titulo='Em andamento'/>
+                <Quadro className='quadroKanban' titulo='Concluído'/>    
+            </div>
+            
             <Footer />
         </>
     );

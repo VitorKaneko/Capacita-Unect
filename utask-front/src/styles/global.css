@@ -15,6 +15,7 @@
     --icon-border: #FFFCEE;
     --bg-body: #FAFAFA;
     --bg-footer: #3867D6;
+    --bg-cards: #EEEEEE;
 }
 
 [data-theme='dark']{
@@ -27,6 +28,7 @@
     --color-daily-icon: #FFFFFF;
     --bg-body: #222222;
     --bg-footer: #111111;
+    --bg-cards: #333333;
 }
 
 body{

@@ -1,0 +1,19 @@
+.tituloQuadros{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.quadroReadyContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.containerCards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--bg-cards);
+}
