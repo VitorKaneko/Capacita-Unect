@@ -23,7 +23,7 @@ export function ModalCard( { isOpen, onClose, className, titulo, descricao }: Mo
                 <p><b>Titulo *</b></p>
                 <Input type='text' placeholder={titulo} className='inpTitulo' />         
                 <p><b>Descrição</b></p>
-                <textarea placeholder={descricao} className='txtAreaDesc'></textarea>
+                <textarea style={{backgroundColor: 'var(--bg-cards)', color:' var(--text-color)'}} placeholder={descricao} className='txtAreaDesc'></textarea>
                 <Botao type='submit' text='Criar task' className='btnCriarTask'/>
             </div>
         </div>

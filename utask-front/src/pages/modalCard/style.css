@@ -59,3 +59,8 @@
     font-family: Poppins;
     color: #3867D6;
 }
+
+.divCard{
+     background-color: var(--bg-card);
+     color: var(--text-color);
+}

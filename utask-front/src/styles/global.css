@@ -7,15 +7,17 @@
 
 
 :root{
-    --bg-primary: #3867D6;
+    --bg-primary: hsl(222, 66%, 53%);
     --bg-card: #FFFFFF;
     --text: #F5F5F5;
+    --text-color: #111111;
     --color-daily-icon: #FBB910;
     --bg-icon: #FFF5C0;
     --icon-border: #FFFCEE;
     --bg-body: #FAFAFA;
     --bg-footer: #3867D6;
     --bg-cards: #EEEEEE;
+    
 }
 
 [data-theme='dark']{
