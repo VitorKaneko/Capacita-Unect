@@ -1,6 +1,6 @@
 .dailyMessageContainer{
     background-color: var(--bg-card);
-    width: 38.75rem;
+    width: 40%;
     height: 7.438rem;
     color: var(--text-color);
     display: flex;
@@ -12,7 +12,6 @@
     padding: 0.5rem;
     border-radius: 1rem;
 }
-
 
 .dailyText{
     font-size: 0.875rem;
@@ -26,17 +25,37 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 2rem;
+    
 }
 
-
-
-
+.kanbanPage{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.kanbanMain {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    flex-shrink: 0;
+}
 
 @media (max-width: 376px) {
     .dailyMessageContainer {
-        width: 100%;
-        background-color: #226ED8;
-        margin: 0;
+        width: 90%;
+        background-color: var(--bg-card);
+        margin: 5%;
         max-width: 100%;
     }
+    .dailyText{
+        font-size: 80%;
+    }
+    .quadrosContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
 }

@@ -64,3 +64,13 @@
      background-color: var(--bg-card);
      color: var(--text-color);
 }
+
+
+@media (max-width: 376px){
+    .divContainer{
+        width: 100%;
+    }
+    .divCard{
+        width: 90%;
+    }
+}

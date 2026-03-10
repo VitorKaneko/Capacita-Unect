@@ -1,0 +1,30 @@
+{
+  "name": "utask-back",
+  "version": "1.0.0",
+  "description": "Backend do projeto uTask 3.0",
+  "type": "module",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.18.0",
+    "prisma": "^7.4.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.0",
+    "@prisma/adapter-pg": "^7.4.2",
+    "@prisma/client": "^7.4.2",
+    "dotenv": "^16.6.1",
+    "fastify": "^5.2.0",
+    "pg": "^8.13.0",
+    "zod": "^3.24.0"
+  }
+}
